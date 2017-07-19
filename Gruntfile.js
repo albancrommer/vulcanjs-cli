@@ -57,4 +57,9 @@ module.exports = (grunt) => {
       'copy',
     ]
   );
+  grunt.registerTask('createScript', 'Creates the script', function() {
+    var fs = require('fs');
+    fs.chmodSync('./build/index.js', '775');
+  });
+
 };
